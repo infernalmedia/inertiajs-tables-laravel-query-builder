@@ -48,3 +48,27 @@ export const Tailwind2 = {
     TableSearchRows: Tailwind2TableSearchRows,
     TableWrapper: Tailwind2TableWrapper,
 };
+
+import PureCSSButtonWithDropdown from './PureCSS/ButtonWithDropdown.vue';
+import PureCSSHeaderCell from './PureCSS/HeaderCell.vue';
+import PureCSSPagination from './PureCSS/Pagination.vue';
+import PureCSSTable from './PureCSS/Table.vue';
+import PureCSSTableAddSearchRow from './PureCSS/TableAddSearchRow.vue';
+import PureCSSTableColumns from './PureCSS/TableColumns.vue';
+import PureCSSTableFilter from './PureCSS/TableFilter.vue';
+import PureCSSTableGlobalSearch from './PureCSS/TableGlobalSearch.vue';
+import PureCSSTableSearchRows from './PureCSS/TableSearchRows.vue';
+import PureCSSTableWrapper from './PureCSS/TableWrapper.vue';
+
+export const PureCSS = {
+    ButtonWithDropdown: PureCSSButtonWithDropdown,
+    HeaderCell: PureCSSHeaderCell,
+    Pagination: PureCSSPagination,
+    Table: PureCSSTable,
+    TableAddSearchRow: PureCSSTableAddSearchRow,
+    TableColumns: PureCSSTableColumns,
+    TableFilter: PureCSSTableFilter,
+    TableGlobalSearch: PureCSSTableGlobalSearch,
+    TableSearchRows: PureCSSTableSearchRows,
+    TableWrapper: PureCSSTableWrapper,
+};

@@ -16,6 +16,7 @@ class InertiaTable
     private Collection $search;
     private Collection $filters;
     private bool $globalSearch = true;
+    private array $translations;
 
     public function __construct(Request $request)
     {
@@ -25,6 +26,7 @@ class InertiaTable
         $this->sortables = [];
         $this->search  = new Collection;
         $this->filters = new Collection;
+        $this->translations = $this->getDefaultTranlsations();
     }
 
     /**
@@ -57,6 +59,7 @@ class InertiaTable
             'columns' => $columns->isNotEmpty() ? $columns->all() : (object) [],
             'search'  => $search->isNotEmpty() ? $search->all() : (object) [],
             'filters' => $filters->isNotEmpty() ? $filters->all() : (object) [],
+            'translations' => $this->translations,
         ];
     }
 
@@ -203,6 +206,19 @@ class InertiaTable
     }
 
     /**
+     * Add and update translations array
+     *
+     * @param array $updatedTranslations
+     * @return self
+     */
+    public function updateTranslations(array $updatedTranslations = []): self
+    {
+        $this->translations = array_merge($this->translations, $updatedTranslations);
+
+        return $this;
+    }
+
+    /**
      * Add a search row to the query builder.
      *
      * @param string $key
@@ -247,5 +263,23 @@ class InertiaTable
         ]);
 
         return $this;
+    }
+
+    private function getDefaultTranlsations(): array
+    {
+        $translationsArray = __('pagination');
+
+        $translationsArray = array_merge($translationsArray, [
+            'filter' => "Filter",
+            "next" => "suivant",
+            "no_results_found" => "Aucun résultats",
+            "of" => "sur",
+            "previous" => "précédent",
+            "results" => "résultats",
+            "search_placeholder" => "Chercher",
+            "to" => "à",
+        ]);
+
+        return $translationsArray;
     }
 }

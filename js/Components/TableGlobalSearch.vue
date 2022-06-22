@@ -11,6 +11,13 @@ export default {
       type: Function,
       required: true,
     },
+    translations: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+      required: true,
+    },
   },
 };
 </script>

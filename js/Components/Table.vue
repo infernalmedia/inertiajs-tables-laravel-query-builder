@@ -25,6 +25,14 @@ export default {
       required: false,
     },
 
+    translations: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+      required: true,
+    },
+
     search: {
       type: Object,
       default: () => {
@@ -69,18 +77,23 @@ export default {
     },
 
     paginationMeta() {
+      let paginationMeta = Object.assign({}, this.meta, {
+        translations: this.translations,
+      });
       if (this.hasBody) {
-        return this.meta;
+        return paginationMeta;
       }
 
-      const hasPagination = 'meta' in this.meta || ('total' in this.meta && 'to' in this.meta && 'from' in this.meta);
+      const hasPagination =
+        "meta" in this.meta ||
+        ("total" in this.meta && "to" in this.meta && "from" in this.meta);
 
       if (hasPagination) {
-        return this.meta;
+        return paginationMeta;
       }
 
       return { meta: { total: 0 } };
-    }
+    },
   },
 
   data() {

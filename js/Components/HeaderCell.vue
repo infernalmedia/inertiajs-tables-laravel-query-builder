@@ -5,6 +5,13 @@ export default {
       type: Object,
       required: true,
     },
+    translations: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+      required: true,
+    },
   },
 
   methods: {

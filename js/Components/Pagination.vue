@@ -9,6 +9,12 @@ const Pagination = {
 
   computed: {
     translations() {
+      if (
+        this.meta.hasOwnProperty("translations") &&
+        Object.keys(this.meta.translations).length > 0
+      ) {
+        return this.meta.translations;
+      }
       return Pagination.defaultTranslations;
     },
 

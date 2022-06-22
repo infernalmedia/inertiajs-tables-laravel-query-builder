@@ -12,6 +12,7 @@ class InertiaTable
 {
     private Request $request;
     private Collection $columns;
+    private array $sortables;
     private Collection $search;
     private Collection $filters;
     private bool $globalSearch = true;
@@ -21,6 +22,7 @@ class InertiaTable
         $this->request = $request;
 
         $this->columns = new Collection;
+        $this->sortables = [];
         $this->search  = new Collection;
         $this->filters = new Collection;
     }
@@ -156,6 +158,21 @@ class InertiaTable
         return $response->with('queryBuilderProps', $this->getQueryBuilderProps());
     }
 
+
+    /**
+     * Add sortable column to columns payload.
+     * To call before addColumns
+     *
+     * @param array $keys
+     * @return self
+     */
+    public function addSortables(array $keys): self
+    {
+        $this->sortables = $keys;
+
+        return $this;
+    }
+
     /**
      * Add a column to the query builder.
      *
@@ -170,6 +187,7 @@ class InertiaTable
             'key'     => $key,
             'label'   => $label,
             'enabled' => $enabled,
+            'sortable' => in_array($key, $this->sortables)
         ]);
 
         return $this;

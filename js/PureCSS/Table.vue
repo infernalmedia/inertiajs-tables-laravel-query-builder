@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="dt-container">
     <div class="table-filters">
       <slot
         name="tableFilter"
@@ -11,6 +11,7 @@
           v-if="hasFilters"
           :filters="filters"
           :on-change="changeFilterValue"
+          :translations="translations"
         />
       </slot>
 
@@ -24,6 +25,7 @@
             v-if="search && search.global"
             :value="search.global.value"
             :on-change="changeGlobalSearchValue"
+            :translations="translations"
           />
         </div>
       </slot>
@@ -40,6 +42,7 @@
           :rows="search"
           :new="newSearch"
           :on-add="enableSearch"
+          :translations="translations"
         />
       </slot>
 
@@ -53,6 +56,7 @@
           v-if="hasColumns"
           :columns="columns"
           :on-change="changeColumnStatus"
+          :translations="translations"
         />
       </slot>
     </div>
@@ -72,6 +76,7 @@
         :new="newSearch"
         :on-remove="disableSearch"
         :on-change="changeSearchValue"
+        :translations="translations"
       />
     </slot>
 
@@ -125,13 +130,60 @@ export default {
 };
 </script>
 <style>
-:root {
+.dt-container {
   --dt-text-opacity: 1;
   --dt-bg-opacity: 1;
   --dt-divide-y-reverse: 0;
   --dt-divide-opacity: 1;
   --dt-border-opacity: 1;
   --dt-input-border-color: 209, 213, 219;
+}
+
+.dt-container [type="button"],
+.dt-container [type="reset"],
+.dt-container [type="submit"],
+.dt-container button {
+  /* -webkit-appearance: button; */
+  -webkit-appearance: none;
+  /* background-color: transparent; */
+  background-image: none;
+}
+.dt-container input {
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+}
+
+.dt-container .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.dt-container select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  print-color-adjust: exact;
+  appearance: none;
+  background-color: #fff;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 0.5rem;
+  border-width: 0;
+  --dt-shadow: 0 0 #0000;
+  text-transform: none;
 }
 </style>
 

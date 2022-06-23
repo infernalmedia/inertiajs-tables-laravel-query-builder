@@ -1,4 +1,4 @@
-# Inertia.js Tables for Laravel Query Builder
+# [FORKED] Inertia.js Tables for Laravel Query Builder
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/@protonemedia/inertiajs-tables-laravel-query-builder.svg?style=flat-square)](https://npmjs.com/package/@protonemedia/inertiajs-tables-laravel-query-builder)
 [![npm](https://img.shields.io/npm/dt/@protonemedia/inertiajs-tables-laravel-query-builder.svg?style=flat-square)](https://www.npmjs.com/package/@protonemedia/inertiajs-tables-laravel-query-builder)

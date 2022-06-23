@@ -1,7 +1,7 @@
 <template>
   <div class="table-global-search">
     <input
-      placeholder="Search..."
+      :placeholder="translations.search_placeholder"
       :value="value"
       type="text"
       @input="onChange($event.target.value)"
@@ -9,7 +9,6 @@
     <div class="table-global-search__icon">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-gray-400"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -82,5 +81,10 @@ export default {
   display: flex;
   place-items: center;
   pointer-events: none;
+}
+.table-global-search__icon > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: rgb(156 163 175 / var(--dt-text-opacity));
 }
 </style>

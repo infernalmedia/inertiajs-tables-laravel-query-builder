@@ -3,7 +3,7 @@
     class="table-filter"
     :class="hasEnabledFilter ? 'table-filter--active' : null"
     :active="hasEnabledFilter"
-    placement="bottom-end"
+    placement="auto"
   >
     <template #button>
       <svg
@@ -109,10 +109,6 @@ export default {
     var(--dt-input-border-color, 99, 102, 241),
     var(--dt-border-opacity)
   );
-  /* shadow-sm
-              sm:text-sm
-              border-gray-300
-              rounded-md  */
 }
 @media (min-width: 640px) .table-filter__menu .select-container select {
   font-size: 0.875rem;

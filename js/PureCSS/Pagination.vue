@@ -108,16 +108,14 @@ export default {
 </script>
 <style>
 .pagination-container {
-  /* border-t border-gray-200 sm:px-6 */
-
   background-color: #fff;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-style: solid;
+  border-top-style: solid;
   border-top-width: 1px;
-  border-color: rgba(229, 231, 235, var(--dt-border-opacity));
+  border-top-color: rgba(229, 231, 235, var(--dt-border-opacity));
 }
 @media (min-width: 640px) {
   .pagination-container {
@@ -200,7 +198,6 @@ export default {
 .pagination-button--next {
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
-  margin-left: 0.75rem;
 }
 @media (max-width: 639.98px) {
   .pagination-button--next {

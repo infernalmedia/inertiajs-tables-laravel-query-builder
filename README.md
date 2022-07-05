@@ -10,13 +10,7 @@ This package provides a *DataTables-like* experience for [Inertia.js](https://in
 
 ![Inertia.js Table for Laravel Query Builder](https://user-images.githubusercontent.com/8403149/113340981-e3863680-932c-11eb-8017-7a6588916508.mp4)
 
-## Launcher 🚀
 
-Hey! We've built a Docker-based deployment tool to launch apps and sites fully containerized. You can find all features and the roadmap on our [website](https://uselauncher.com), and we are on [Twitter](https://twitter.com/uselauncher) as well!
-
-## Support
-
-We proudly support the community by developing Laravel packages and giving them away for free. Keeping track of issues and pull requests takes time, but we're happy to help! If this package saves you time or if you're relying on it professionally, please consider [supporting the maintenance and development](https://github.com/sponsors/pascalbaljet).
 
 ## Features
 
@@ -30,23 +24,20 @@ We proudly support the community by developing Laravel packages and giving them 
 
 ## Compatibility
 
-* [Vue 2.6](https://vuejs.org/v2/guide/installation.html) and [Vue 3](https://v3.vuejs.org/guide/installation.html)
-* [Laravel 8 or 9](https://laravel.com/)
+* [Vue 3](https://v3.vuejs.org/guide/installation.html)
+* [Laravel 9](https://laravel.com/)
 * [Inertia.js](https://inertiajs.com/)
-* [Tailwind CSS v2](https://tailwindcss.com/) + [Forms plugin](https://github.com/tailwindlabs/tailwindcss-forms)
-* PHP 7.4 + 8.0 + 8.1
+* PHP 8.1
 
-## Roadmap
+## Infernal Media Roadmap 
 
-* Remove @tailwindcss/forms dependency
-* Debounce delay for inputs
-* Convert Table.vue styling to proper Tailwind syntax
-* Improve styling on really small screens
-* Better documentation about customization and move to real renderless components
+* [ ] Improve styling customization with clever CSS variable
+* [ ] Debounce delay for inputs
+* [ ] Improve styling on really small screens
 
 ## Installation
 
-You need to install both the server-side package as well as the client-side package. Note that this package is only compatible with Laravel 8, Vue 2.6 + 3.0 and requires the Tailwind Forms plugin.
+You need to install both the server-side package as well as the client-side package. Note that this package is only compatible with Laravel 9,  Vue 3.0 and Inertia .
 
 ### Server-side installation (Laravel)
 
@@ -56,7 +47,7 @@ You can install the package via composer:
 composer require protonemedia/inertiajs-tables-laravel-query-builder
 ```
 
-The package will automatically register the Service Provider which provides a `table` method that you can use on an Interia Response.
+The package will automatically register the Service Provider which provides a `table` method that you can use on an Inertia Response.
 
 #### Search fields
 

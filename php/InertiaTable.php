@@ -270,14 +270,14 @@ class InertiaTable
         $translationsArray = __('pagination');
 
         $translationsArray = array_merge($translationsArray, [
-            'filter' => "Filter",
-            "next" => "suivant",
-            "no_results_found" => "Aucun résultats",
-            "of" => "sur",
-            "previous" => "précédent",
-            "results" => "résultats",
-            "search_placeholder" => "Chercher",
-            "to" => "à",
+            'filter' => __('crud.filter'),
+            "next" => __('crud.next'),
+            "no_results_found" => __('crud.no_results_found'),
+            "of" => __('crud.of'),
+            "previous" => __('crud.previous'),
+            "results" => __('crud.results'),
+            "search_placeholder" => __('crud.search_placeholder'),
+            "to" => __('crud.to'),
         ]);
 
         return $translationsArray;

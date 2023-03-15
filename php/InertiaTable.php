@@ -10,13 +10,13 @@ use Inertia\Response;
 
 class InertiaTable
 {
-    private Request $request;
-    private Collection $columns;
-    private array $sortables;
-    private Collection $search;
-    private Collection $filters;
-    private bool $globalSearch = true;
-    private array $translations;
+    protected Request $request;
+    protected Collection $columns;
+    protected array $sortables;
+    protected Collection $search;
+    protected Collection $filters;
+    protected bool $globalSearch = true;
+    protected array $translations;
 
     public function __construct(Request $request)
     {
@@ -68,7 +68,7 @@ class InertiaTable
      *
      * @return \Illuminate\Support\Collection
      */
-    private function transformColumns(): Collection
+    protected function transformColumns(): Collection
     {
         $columns = $this->request->query('columns', []);
 
@@ -90,7 +90,7 @@ class InertiaTable
      *
      * @return \Illuminate\Support\Collection
      */
-    private function transformSearch(): Collection
+    protected function transformSearch(): Collection
     {
         $search = $this->search->collect();
 
@@ -125,7 +125,7 @@ class InertiaTable
      *
      * @return \Illuminate\Support\Collection
      */
-    private function transformFilters(): Collection
+    protected function transformFilters(): Collection
     {
         $filters = $this->request->query('filter', []);
 
@@ -265,7 +265,7 @@ class InertiaTable
         return $this;
     }
 
-    private function getDefaultTranlsations(): array
+    protected function getDefaultTranlsations(): array
     {
         $translationsArray = __('pagination');
 

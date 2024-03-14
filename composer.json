@@ -1,48 +1,48 @@
 {
-    "name": "protonemedia/inertiajs-tables-laravel-query-builder",
-    "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
-    "homepage": "https://github.com/protonemedia/inertiajs-tables-laravel-query-builder",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Pascal Baljet",
-            "email": "pascal@protone.media"
-        }
-    ],
-    "require": {
-        "php": "^7.4|^8.0|^8.1",
-        "illuminate/support": "^8.67|^v9.0.0-beta.4"
-    },
-    "require-dev": {
-        "inertiajs/inertia-laravel": "^0.5",
-        "orchestra/testbench": "^6.23|^7.0",
-        "phpunit/phpunit": "^9.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\": "php"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\InertiaTableServiceProvider"
-            ]
-        }
+  "name": "protonemedia/inertiajs-tables-laravel-query-builder",
+  "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
+  "homepage": "https://github.com/protonemedia/inertiajs-tables-laravel-query-builder",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pascal Baljet",
+      "email": "pascal@protone.media"
     }
+  ],
+  "require": {
+    "php": "^7.4|^8.0|^8.1",
+    "illuminate/support": "^8.67|^9.0|^10.0"
+  },
+  "require-dev": {
+    "inertiajs/inertia-laravel": "^0.5",
+    "orchestra/testbench": "^6.23|^7.0",
+    "phpunit/phpunit": "^9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\": "php"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\InertiaTableServiceProvider"
+      ]
+    }
+  }
 }

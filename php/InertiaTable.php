@@ -26,7 +26,7 @@ class InertiaTable
         $this->sortables = [];
         $this->search  = new Collection;
         $this->filters = new Collection;
-        $this->translations = $this->getDefaultTranlsations();
+        $this->translations = $this->getDefaultTranslations();
     }
 
     /**
@@ -265,7 +265,7 @@ class InertiaTable
         return $this;
     }
 
-    protected function getDefaultTranlsations(): array
+    public function getDefaultTranslations(): array
     {
         $translationsArray = __('pagination');
 

@@ -110,8 +110,10 @@ export default {
     var(--dt-border-opacity)
   );
 }
-@media (min-width: 640px) .table-filter__menu .select-container select {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+@media (min-width: 640px) {
+  .table-filter__menu .select-container select {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 </style>
